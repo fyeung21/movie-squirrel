@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import PageHome from '../pages/PageHome';
 import PageMovieSingle from '../pages/PageMovieSingle';
 import PageFaves from '../pages/PageFaves';
 import PageNotFound from '../pages/PageNotFound';
 import PageAbout from '../pages/PageAbout';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer/Footer';
 
 const AppRouter = () => {
   return (

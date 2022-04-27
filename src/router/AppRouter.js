@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from '../components/Header';
 import PageHome from '../pages/PageHome';
-import PageSingleMovie from '../pages/PageSingleMovie';
+import PageMovieSingle from '../pages/PageMovieSingle';
 import PageFaves from '../pages/PageFaves';
 import PageNotFound from '../pages/PageNotFound';
 import PageAbout from '../pages/PageAbout';
@@ -14,7 +14,7 @@ const AppRouter = () => {
         <Header />
         <Routes>
           <Route path="/" exact element={<PageHome />} />
-          <Route path="/:id" element={<PageSingleMovie />} />
+          <Route path="/:id" element={<PageMovieSingle />} />
           <Route path="/favourites" element={<PageFaves />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="*" element={<PageNotFound />} />

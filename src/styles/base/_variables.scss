@@ -1,0 +1,52 @@
+// ----- variables ----- //
+
+// ----- general colours ----- //
+$main-color: #ffffff;
+$accent-color: #DB9CFF;
+// backgrounds (footer,header, etc.)
+$main-background: #000000;
+$gradient: #240729;
+// user and fav icons color. may subjected to change
+$icon: #D984CB;
+// this is for that cool LED effect on the rims of the header,,
+$glow: #54396D;
+$glow-outline: $main-color;
+
+
+
+// ----- fonts ----- //
+// non permanent fonts open to changes ^_^
+$font-navigation: 'Roboto Condensed', Arial, sans-serif;
+$font-heading: 'Roboto Condensed', Arial, sans-serif;
+$font-body: 'Roboto', Arial, sans-serif;
+
+// ----- sizes
+$card-titles: 1.5em; // 24px
+$card-subtitles: 1.25em; //20px
+// this is what erin got from her mock up with faves and singles, open to changes aswell <3
+$headings: 2.25em; // 36px
+$large-texts: 1.875em; // 30px
+$nav-links: $headings; // 36px
+
+// ----- font colours
+$title-color: $main-color;
+$text-color: $main-color;
+// subtitle for cards
+$subtitles: $accent-color;
+// links in nav
+$nav-link-color: $main-color;
+$nav-link-color-hover: $accent-color;
+
+// ----- font weights
+$font-weight-navigation: 700;
+$font-weight-heading: 400;
+$font-weight-body: 300;
+
+
+
+// ----- media queries
+$tablet: 37.5em;
+// 768 px -- large tablets
+$large-tablet: 48em;
+// 1024px  -- laptops
+$desktop: 64em;

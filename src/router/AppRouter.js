@@ -14,7 +14,7 @@ const AppRouter = () => {
         <Header />
         <Routes>
           <Route path="/" exact element={<PageHome />} />
-          <Route path="/:id" element={<PageMovieSingle />} />
+          <Route path="/movies/:id" element={<PageMovieSingle />} />
           <Route path="/favourites" element={<PageFaves />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="*" element={<PageNotFound />} />

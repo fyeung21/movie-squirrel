@@ -1,6 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
+import Header from '../components/Header';
+import PageHome from '../pages/PageHome';
+import PageSingleMovie from '../pages/PageSingleMovie';
+import PageFaves from '../pages/PageFaves';
+import PageNotFound from '../pages/PageNotFound';
+import PageAbout from '../pages/PageAbout';
+import Footer from '../components/Footer';
 
 const AppRouter = () => {
   return (
@@ -9,9 +14,9 @@ const AppRouter = () => {
         <Header />
         <Routes>
           <Route path="/" exact element={<PageHome />} />
-          <Route path="/kitten-profile/:id" element={<PageKittenProfile />} />
-          <Route path="/favs" element={<PageFavs />} />
-          <Route path="/contact" element={<PageContact />} />
+          <Route path="/:id" element={<PageSingleMovie />} />
+          <Route path="/favourites" element={<PageFaves />} />
+          <Route path="/about" element={<PageAbout />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

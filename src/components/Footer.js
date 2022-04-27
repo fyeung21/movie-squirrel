@@ -1,13 +1,13 @@
-const Footer = () => {
+const Footer = ({author}) => {
     return (
       <div className="footer">
-          <cite>{author}</cite>
+          <cite>created by: {author}</cite>
       </div>
     );
   }
 
 Footer.defaultProps = {
-    author: 'Corner gang'
+    author: 'corner gang'
 }
   
   export default Footer;

@@ -4,6 +4,15 @@
 
 body {
     margin: 0;
+    background-image: $gradient;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+    color: $text-color;
+
+    a{
+        color: $text-color;
+    }
 }
 
 

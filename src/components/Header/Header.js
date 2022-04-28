@@ -1,9 +1,10 @@
+import Logo from "./Logo";
 import Nav from "./Nav";
 
 const Header = ({title}) => {
     return (
       <div className="header">
-          <h1>{title}</h1>
+          <Logo title={title}/>
           <Nav/>
       </div>
     );

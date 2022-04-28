@@ -3,10 +3,10 @@ import Nav from "./Nav";
 
 const Header = ({title}) => {
     return (
-      <div className="header">
+      <header className="header">
           <Logo title={title}/>
           <Nav/>
-      </div>
+      </header>
     );
   }
 

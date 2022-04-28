@@ -7,14 +7,19 @@ body {
     background-image: $gradient;
     background-repeat: no-repeat;
     height: 100vh;
-    
+    font-family: $font-body;
     color: $text-color;
 
-    a{
+    a {
         color: $text-color;
+        text-decoration: none;
     }
 }
 
+h1 {
+    font-family: $font-heading;
+    font-size: $large-texts;
+}
 
 // main sections
 

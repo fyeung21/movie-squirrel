@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom';
 
-const Nav = ({title}) => {
+const Nav = () => {
     return (
-      <div className="nav">
+      <nav className="nav">
           <ul>
               <li><NavLink to="/">home</NavLink></li>
               <li><NavLink to="/favourites">favourites</NavLink></li>
               <li><NavLink to="/about">about</NavLink></li>
               <li><NavLink to="/user">user</NavLink></li>
           </ul>
-      </div>
+      </nav>
     );
   }
   

@@ -1,1 +1,23 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+header {
+    @media(min-width: $tablet){
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    nav {
+
+        ul {
+            @include flex-row;
+
+            li {
+                margin: 0 1rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

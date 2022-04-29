@@ -9,11 +9,16 @@ const PageHome = () => {
 
   useEffect(()=> {
     const fetchMovies = async () => {
-        const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
-        const query = await res.json();
+      // make a php-esque query here
+        const query = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+        // res is the result
+        const res = await query.json();
         
-        const firstTwelve = query.results.splice(0, 12);
+        // get the first 12 movies here, then set them as the data
+        const firstTwelve = res.results.splice(0, 12);
         setMoviesData(firstTwelve);
+
+        console.log(res);
     }
     fetchMovies();
 

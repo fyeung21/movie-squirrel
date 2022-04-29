@@ -1,3 +1,33 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
+.movies-container{
+    
+    article{
+        div:nth-child(1){
+            position: relative;
+
+            img{
+                max-width: 300px;
+            }
+
+            .hover{
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0.626);
+                z-index: 3;
+                max-width: 300px;
+                height: calc(100% - .25rem);
+                bottom: 0;
+                top: 0;
+                    
+                // styles for that hovering p
+                p,
+                a{
+                    margin: 2rem;
+                }
+
+                
+            }
+        }
+    }
+}

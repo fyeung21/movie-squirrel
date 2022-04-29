@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import favouritesReducer from '../features/favourites/favouritesSlice';
 
-//for storing features aka what I like to call "state bundles"
-export const store = configureStore({
+//for storing features aka state objects
+const store = configureStore({
   reducer: {
-
+    favourites: favouritesReducer
   }
 });
+
+export default store;

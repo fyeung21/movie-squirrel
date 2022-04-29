@@ -7,6 +7,7 @@ body {
     background-image: $gradient;
     background-repeat: no-repeat;
     height: 100%;
+    width: 100%;
     font-family: $font-body;
     color: $text-color;
 
@@ -24,9 +25,8 @@ h1 {
 ul{
     list-style: none;
 }
-// main sections
 
-main {
-    width: 600px;
+.wrapper {
+    max-width: 1200px;
     margin: 0 auto;
 }

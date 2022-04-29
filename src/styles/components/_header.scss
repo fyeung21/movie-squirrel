@@ -3,21 +3,27 @@
 
 header {
     background-color: $main-background;
+
     @media(min-width: $tablet){
         @include flex-row;
         justify-content: space-between;
         align-items: center;
-        margin: 1rem;
     }
 
     nav {
 
         ul {
             @include flex-row;
+            padding: 0;
 
             li {
                 margin: 0 1rem;
                 text-transform: capitalize;
+                padding: 0;
+                
+                &:last-child {
+                    margin: 0 0 0 1rem;
+                }
             }
         }
     }

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { API_KEY } from "../globals/globals";
 import MoviesContainer from "../components/MovieTiles/MoviesContainer";
 import SortNav from "../components/sort-nav/SortNav";
+import { Helmet } from 'react-helmet';
+
 
 const PageHome = ({sort}) => {
 
@@ -26,11 +28,17 @@ const PageHome = ({sort}) => {
 
 }, [sort])  
     return (
-      <section className="pageHome">
-        <SortNav />
-        {/* movies data is where the information from the query will be stored in the prop */}
+      <>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Movies Home | Movie Squirrel</title>
+        </Helmet>
+        <section className="pageHome">
+          <SortNav />
+          {/* movies data is where the information from the query will be stored in the prop */}
           {moviesData !== false && <MoviesContainer moviesData={moviesData}/>}
-      </section>
+        </section>
+      </>
     );
   }
   

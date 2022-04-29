@@ -6,6 +6,7 @@ import PageFaves from '../pages/PageFaves';
 import PageNotFound from '../pages/PageNotFound';
 import PageAbout from '../pages/PageAbout';
 import Footer from '../components/Footer/Footer';
+import MobileNav from '../components/Header/MobileNav';
 
 const AppRouter = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
+        <MobileNav/>
       </div>
     </BrowserRouter>
   );

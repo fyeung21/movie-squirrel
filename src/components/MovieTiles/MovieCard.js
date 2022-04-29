@@ -17,8 +17,9 @@ function MovieCard({movie}) {
         </div>
 
           <div>
-              <h2>test</h2>
-              <p></p>
+              <h2>{movie.title}</h2>
+              <p>Release Date: {movie.release_date}</p>
+              <p>{movie.vote_average}/10</p>
           </div>
       </article>
   )

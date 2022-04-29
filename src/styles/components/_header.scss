@@ -3,6 +3,7 @@
 
 header {
     background-color: $main-background;
+    
     @media(min-width: $tablet){
         @include flex-row;
         justify-content: space-between;
@@ -14,10 +15,12 @@ header {
 
         ul {
             @include flex-row;
+            padding: 0;
 
             li {
                 margin: 0 1rem;
                 text-transform: capitalize;
+                padding: 0;
             }
         }
     }

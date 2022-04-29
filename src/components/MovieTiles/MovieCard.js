@@ -3,10 +3,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function MovieCard() {
+function MovieCard({movie}) {
   return (
     <article className='movie-card'>
-        <img src={"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg"} alt="no poster available"/>
+       { movie.poster_path !== null && 
+       <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={`Poster for '${movie.title}'`}/>}
 
         <div>
             <h2>test</h2>

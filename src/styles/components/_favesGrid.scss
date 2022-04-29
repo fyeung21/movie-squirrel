@@ -1,0 +1,15 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.faves-page {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    
+    @media(min-width: $tablet){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media(min-width: $desktop){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

@@ -1,21 +1,10 @@
 import React from 'react';
 import MovieCard from './MovieCard';
 
-function MoviesContainer() {
+function MoviesContainer( {moviesData}) {
   return (
     <div className='movies-container'>
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
+      {moviesData.map(movie => <MovieCard key={movie.id} movie={movie}/>)}
     </div>
   )
 }

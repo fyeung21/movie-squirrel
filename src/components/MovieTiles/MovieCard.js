@@ -3,16 +3,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function MovieCard() {
-  return (
-    <article className='movie-card'>
-        <img src={"https://www.themoviedb.org/t/p/w300_and_h450_bestv2/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg"} alt="no poster available"/>
+function MovieCard({movie}) {
+
+  
+  return (    
+      <article className='movie-card'>
+        
 
         <div>
-            <h2>test</h2>
-            <p><Link to="/">More info</Link></p>
+          { movie.poster_path !== null && 
+          <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={`Poster for '${movie.title}'`}/>}
+
+          <div className='desc hover'>
+            <p>{movie.overview}</p>
+            <Link to="/">More info</Link>
+          </div>
         </div>
-    </article>
+
+          <div>
+              <h2>{movie.title}</h2>
+              <p>Release Date: {movie.release_date}</p>
+              <p>{movie.vote_average}/10</p>
+          </div>
+      </article>
   )
 }
 

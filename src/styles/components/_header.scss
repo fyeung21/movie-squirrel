@@ -2,6 +2,7 @@
 @use '../base/mixins' as *;
 
 header {
+    background-color: $main-background;
     @media(min-width: $tablet){
         @include flex-row;
         justify-content: space-between;

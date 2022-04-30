@@ -1,3 +1,13 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
+.page-about {
+    height: 100vh;
+    
+    .about-container {
+        border: solid 1px $accent-color;
+        max-width: 700px;
+        margin: 8rem auto;
+        padding: 1rem; 
+    }
+}

@@ -2,8 +2,12 @@
 @use '../base/mixins' as *;
 
 .page-about {
-    border: solid 1px $accent-color;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1rem;
+    height: 100vh;
+    
+    .about-container {
+        border: solid 1px $accent-color;
+        max-width: 700px;
+        margin: 8rem auto;
+        padding: 1rem; 
+    }
 }

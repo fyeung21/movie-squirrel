@@ -1,0 +1,11 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.pageNotFound {
+
+    text-align: center;
+    border: solid 1px $accent-color;
+    max-width: 700px;
+    margin: 8rem auto;
+    padding: 3rem; 
+}

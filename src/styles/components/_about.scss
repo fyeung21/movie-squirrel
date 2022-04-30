@@ -1,0 +1,9 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.page-about {
+    border: solid 1px $accent-color;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}

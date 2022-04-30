@@ -1,11 +1,14 @@
 import React from 'react';
 // import link 
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addFavourite, removeFavourite } from '../../features/favourites/favouritesSlice';
 
 
 function MovieCard({movie}) {
 
-  
+  const dispatch = useDispatch()
+
   return (    
       <article className='movie-card'>
         
@@ -24,6 +27,10 @@ function MovieCard({movie}) {
               <h2>{movie.title}</h2>
               <p>Release Date: {movie.release_date}</p>
               <p>{movie.vote_average}/10</p>
+          </div>
+          <div className="movie-fav-controls">
+            <button onClick={() => dispatch(addFavourite(movie))}>Add To Favs</button>
+            <button onClick={() => dispatch(removeFavourite(movie))}>Remove From Favs</button>
           </div>
       </article>
   )

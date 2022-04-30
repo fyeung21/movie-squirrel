@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet';
 import MovieCard from '../components/MovieTiles/MovieCard';
 
+
+
 const PageFaves = () => {
   return (
     <>
@@ -10,11 +12,11 @@ const PageFaves = () => {
       </Helmet>
       <h2>favourites page</h2>
       <section className="faves-page">
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        {/* <MovieCard moviesData={moviesData}/>
+        <MovieCard moviesData={moviesData}/>
+        <MovieCard moviesData={moviesData}/>
+        <MovieCard moviesData={moviesData}/>
+        <MovieCard moviesData={moviesData}/> */}
       </section>
     </>
   );

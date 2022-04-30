@@ -1,0 +1,9 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.page-about {
+  border: solid 1px skyblue;
+  h1  {
+    font-size: 10rem;
+  }
+}

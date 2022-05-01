@@ -9,10 +9,13 @@ export const favouritesSlice = createSlice({
   reducers: {
     //add functions that will manipulate the state
     addFavourite: (state, action) => {
-        state.value.push(action.payload);
+        console.log(state.value);
+        console.log(action.payload);
+        state.value = [...state.value, action.payload];
     },
     removeFavourite: (state, action) => {
         state.value.pop(action.payload);
+        console.log('removing fav...TO DO!!!')
     }
   }
 })

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import React from 'react'
 
-function SortNav() {
+const SortNav = () => {
   return (
     <nav>
         <ul>

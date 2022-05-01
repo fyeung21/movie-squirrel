@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { API_KEY } from "../globals/globals";
 import MoviesContainer from "../components/MovieTiles/MoviesContainer";
-import SortNav from "../components/sort-nav/SortNav";
+import SortNav from "../components/SortNav/SortNav";
 import { Helmet } from 'react-helmet';
 
 

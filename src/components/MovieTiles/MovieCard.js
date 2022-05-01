@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function MovieCard({movie}) {
+const MovieCard = ({movie}) => {
 
   
   return (    

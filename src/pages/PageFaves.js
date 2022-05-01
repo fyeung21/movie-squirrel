@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import FavesContainer from '../components/Faves/FavesContainer';
 import MovieCard from '../components/MovieTiles/MovieCard';
 
 const PageFaves = () => {
@@ -8,13 +9,9 @@ const PageFaves = () => {
         <meta charSet="utf-8" />
         <title>Favourites | Movie Squirrel</title>
       </Helmet>
-      <h2>favourites page</h2>
-      <section className="faves-page">
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+      <section className='faves-page'>
+      <h2>favourites</h2>
+        <FavesContainer />
       </section>
     </>
   );

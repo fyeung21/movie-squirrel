@@ -17,7 +17,7 @@ const MovieCard = ({movie}) => {
 
           <div className='desc hover'>
             <p>{movie.overview}</p>
-            <Link to="/">More info</Link>
+            <Link to={`/movies/${movie.id}`}>More info</Link>
           </div>
         </div>
 

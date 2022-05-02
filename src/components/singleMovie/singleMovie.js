@@ -1,6 +1,8 @@
 import React from 'react';
 // add the place holder no movieposter here
 import noPoster from '../../images/no-movie-poster.jpg';
+// import buttons here !
+import FaveBtn from '../Faves/FaveBtn';
 
 function SingleMovie({movie}) {
   return (
@@ -13,6 +15,8 @@ function SingleMovie({movie}) {
 
     <div>
         <h1>{movie.title}</h1>
+        <FaveBtn />
+        <p>{movie.vote_average}/10</p>
         <p>{movie.overview}</p>
     </div>
     </section>

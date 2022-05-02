@@ -4,7 +4,7 @@ import noPoster from '../../images/no-movie-poster.jpg';
 // import buttons here !
 import FaveBtn from '../Faves/FaveBtn';
 
-function SingleMovie({movie}) {
+const SingleMovie = ({movie}) => {
   return (
     <section>
     <div className='single-movie-poster'>

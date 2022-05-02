@@ -36,11 +36,11 @@ const PageMovieSingle = () => {
             <meta charSet="utf-8" />
             <title>{`${`movies.title`} | Movie Squirrel`}</title>
         </Helmet>
-        <div className="pageMovieSingle">
-          <h1>single movie page</h1>
+
+        <section className="pageMovieSingle">
           {/* store the single movie data in a prop */}
-          <SingleMovie movie={movieData}/>
-        </div>
+          {movieData !== false   && <SingleMovie movie={movieData}/>}
+        </section>
       </>
     );
   }

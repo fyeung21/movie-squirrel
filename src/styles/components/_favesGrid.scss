@@ -22,13 +22,18 @@
     }
 }
 
-//for icon to appear, need to set "width" in svg and "fill" in path
 .fave-btn {
-    svg {
-        width: 3rem;
-
-        path {
-            fill: $accent-color;
+    button {
+        background-color: transparent;
+        border: none;
+        
+        //for icon to appear, need to set "width" in svg and "fill" in path
+        svg {
+            width: 2.5rem;
+    
+            path {
+                fill: $accent-color;
+            }
         }
     }
 }

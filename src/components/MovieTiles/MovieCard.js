@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { addFavourite, removeFavourite } from '../../features/favourites/favouritesSlice';
+import FaveBtn from '../Faves/FaveBtn';
 
 
 const MovieCard = ({movie}) => {
-
-  const dispatch = useDispatch();
 
   return (    
       <article className='movie-card'>
@@ -26,11 +23,7 @@ const MovieCard = ({movie}) => {
               <p>Release Date: {movie.release_date}</p>
               <p>{movie.vote_average}/10</p>
           </div>
-          {/* temp html tags but need to keep buttons with onClick, later use toggle heart function */}
-          <div className="favourite-btn">
-            <button onClick={() => dispatch(addFavourite(movie))}>Add To Favs</button>
-            <button onClick={() => dispatch(removeFavourite(movie))}>Remove From Favs</button>
-          </div>
+          <FaveBtn movie={movie} />
       </article>
   )
 }

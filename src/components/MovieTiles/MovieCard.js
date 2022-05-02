@@ -5,6 +5,9 @@ import FaveBtn from '../Faves/FaveBtn';
 
 const MovieCard = ({movie}) => {
 
+  const desc = movie.overview.substring(1, 200) + " ...";
+  // console.log(movie.overview.substring(1, 227));
+
   return (    
       <article className='movie-card'>
         
@@ -13,7 +16,7 @@ const MovieCard = ({movie}) => {
           <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={`Poster for '${movie.title}'`}/>}
 
           <div className='desc hover'>
-            <p>{movie.overview}</p>
+            <p>{movie.overview.length > 200 ? desc : movie.overview}</p>
             <Link to={`/movies/${movie.id}`}>More info</Link>
           </div>
         </div>

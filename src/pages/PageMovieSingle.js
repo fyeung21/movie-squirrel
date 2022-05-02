@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY } from '../globals/globals';
-import SingleMovie from '../components/MovieSingle/MovieSingle';
+import MovieSingle from '../components/MovieSingle/MovieSingle';
 
 const PageMovieSingle = () => {
 
@@ -39,7 +39,7 @@ const PageMovieSingle = () => {
 
         <section className="pageMovieSingle">
           {/* store the single movie data in a prop */}
-          {movieData !== false   && <SingleMovie movie={movieData}/>}
+          {movieData !== false   && <MovieSingle movie={movieData}/>}
         </section>
       </>
     );

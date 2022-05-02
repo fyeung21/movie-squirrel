@@ -21,3 +21,14 @@
         }
     }
 }
+
+//for icon to appear, need to set "width" in svg and "fill" in path
+.fave-btn {
+    svg {
+        width: 3rem;
+
+        path {
+            fill: $accent-color;
+        }
+    }
+}

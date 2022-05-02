@@ -5,7 +5,7 @@ import FaveBtn from '../Faves/FaveBtn';
 
 const MovieCard = ({movie}) => {
 
-  const desc = movie.overview.substring(1, 200) + " ...";
+  const desc = movie.overview.substring(0, 200) + " ...";
   // console.log(movie.overview.substring(1, 227));
 
   return (    

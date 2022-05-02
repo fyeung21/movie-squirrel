@@ -15,7 +15,7 @@ const MovieSingle = ({movie}) => {
 
     <div>
         <h1>{movie.title}</h1>
-        <FaveBtn />
+        <FaveBtn movie={movie}/>
         <p>{movie.vote_average}/10</p>
         <p>{movie.overview}</p>
     </div>

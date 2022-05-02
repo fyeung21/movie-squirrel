@@ -18,12 +18,12 @@ const MovieCard = ({movie}) => {
           </div>
         </div>
 
-          <div>
-              <h2>{movie.title}</h2>
-              <p>Release Date: {movie.release_date}</p>
-              <p>{movie.vote_average}/10</p>
-          </div>
-          <FaveBtn movie={movie} />
+        <div className='titles'>
+            <h2>{movie.title}</h2>
+            <p>Release Date: {movie.release_date}</p>
+            <p>{movie.vote_average}/10</p>
+            <FaveBtn movie={movie} />
+        </div>
       </article>
   )
 }

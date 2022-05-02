@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet';
+import SingleMovie from '../components/singleMovie/SingleMovie';
 
 const PageMovieSingle = () => {
     return (
@@ -9,6 +10,7 @@ const PageMovieSingle = () => {
         </Helmet>
         <div className="pageMovieSingle">
           <h1>single movie page</h1>
+          <SingleMovie />
         </div>
       </>
     );

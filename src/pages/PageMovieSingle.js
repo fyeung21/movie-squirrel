@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_KEY } from '../globals/globals';
-import SingleMovie from '../components/singleMovie/SingleMovie';
+import SingleMovie from '../components/SingleMovie/SingleMovie';
 
 const PageMovieSingle = () => {
 

@@ -10,7 +10,6 @@ const MobileNav = () => {
               <li><NavLink to="/"><FontAwesomeIcon icon={faFilm} /></NavLink></li>
               <li><NavLink to="/favourites"><FontAwesomeIcon icon={faHeart} /></NavLink></li>
               <li><NavLink to="/about"><FontAwesomeIcon icon={faCircleInfo} /></NavLink></li>
-              <li><NavLink to="/user"><FontAwesomeIcon icon={faUser} /></NavLink></li>
           </ul>
       </nav>
     );

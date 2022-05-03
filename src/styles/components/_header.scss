@@ -52,6 +52,14 @@ header {
                         &:last-child {
                             margin: 0 0 0 1rem;
                         }
+
+                        a {
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                color: $accent-color;
+                            }
+                        }
                     }
                 }
             }

@@ -29,6 +29,14 @@
             a {
                 padding: 1.5rem;
 
+                &:hover,
+                &:focus,
+                &:active {
+                    path {
+                        fill: $accent-color;
+                    }
+                }
+
                 //for icons to appear, need to set "width" in svg and "fill" in path
                 svg {
                     width: 2rem;

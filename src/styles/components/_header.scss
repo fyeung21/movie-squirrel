@@ -1,28 +1,69 @@
-@use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 header {
-    background-color: $main-background;
-
-    @media(min-width: $tablet){
-        @include flex-row;
-        justify-content: space-between;
-        align-items: center;
+    @media (min-width: $tablet) {
+        position: relative;
     }
 
-    nav {
+    .header-bkg {
+        @media (min-width: $tablet) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid $glow-outline;
+            box-shadow: 1px 1px 20px 5px $glow;
+        }
 
-        ul {
-            @include flex-row;
-            padding: 0;
+        .header-wrap {
+            max-width: 1200px;
+            margin: 0 1rem;
+            
+            @media (min-width: $tablet) {
+                @include flex-row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            @media (min-width: $desktop) {
+                margin: 0 auto;
+            }
 
-            li {
-                margin: 0 1rem;
-                text-transform: capitalize;
-                padding: 0;
-                
-                &:last-child {
-                    margin: 0 0 0 1rem;
+            h1 {
+                margin: 0.5rem 0;
+            }
+
+            nav {
+                display: none;
+
+                @media (min-width: $tablet) {
+                    display: block;
+                }
+
+                ul {
+                    @include flex-row;
+                    padding: 0;
+
+                    li {
+                        margin: 0 1rem;
+                        text-transform: capitalize;
+                        padding: 0;
+
+                        &:last-child {
+                            margin: 0 0 0 1rem;
+                        }
+
+                        a {
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                color: $accent-color;
+                            }
+                        }
+                    }
                 }
             }
         }

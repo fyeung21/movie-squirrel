@@ -1,0 +1,22 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.single-movie-style {
+
+    @media (min-width: $tablet) {
+        
+        display: flex;
+        padding: 5rem;
+        gap: 7rem;
+  
+    }
+
+    .single-movie-text   {
+
+        @media (min-width: $tablet) {
+     
+            margin-top: 10rem;
+        }
+    
+    }
+}

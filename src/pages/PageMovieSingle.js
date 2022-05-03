@@ -34,7 +34,7 @@ const PageMovieSingle = () => {
       <>
         <Helmet>
             <meta charSet="utf-8" />
-            <title>{`${`movies.title`} | Movie Squirrel`}</title>
+            <title className='singlepageStyle'>{`${`movies.title`} | Movie Squirrel`}</title>
         </Helmet>
 
         <section className="pageMovieSingle">

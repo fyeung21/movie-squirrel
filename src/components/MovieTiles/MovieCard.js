@@ -9,6 +9,7 @@ const MovieCard = ({movie}) => {
   // console.log(movie.overview.substring(1, 227));
 
   return (    
+    <Link to={`/movies/${movie.id}`}>
       <article className='movie-card'>
         
         <div>
@@ -28,6 +29,7 @@ const MovieCard = ({movie}) => {
             <FaveBtn movie={movie} />
         </div>
       </article>
+    </Link>
   )
 }
 

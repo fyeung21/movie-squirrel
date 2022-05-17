@@ -5,8 +5,13 @@ import FaveBtn from '../Faves/FaveBtn';
 
 const MovieCard = ({movie}) => {
 
+  // this cuts the description so that it isnt too long in the card divs!
   const desc = movie.overview.substring(0, 200) + " ...";
   // console.log(movie.overview.substring(1, 227));
+
+  // this converts the rating from a x/10 to a percentage :)
+  const rating = Math.round((movie.vote_average/10) *100);
+
 
   return (    
     <Link to={`/movies/${movie.id}`}>
@@ -25,7 +30,7 @@ const MovieCard = ({movie}) => {
         <div className='titles'>
             <h2>{movie.title}</h2>
             <p>Release Date: {movie.release_date}</p>
-            <p>{movie.vote_average}/10</p>
+            <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
             <FaveBtn movie={movie} />
         </div>
       </article>

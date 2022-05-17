@@ -2,46 +2,19 @@
 @use '../base/mixins' as *;
 
 .movies-container{
-    
-    article{
-        div:nth-child(1){
-            position: relative;
-            max-width: 300px;
-            
-            img{
-                max-width: 300px;
-            }
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
 
-            .hover{
-                // while you work please just comment this out just in case 
-                opacity: 0;
-                position: absolute;
-                max-width: 300px;
-                height: calc(100% - .25rem);
-                bottom: 0;
-                top: 0;
-                transition: .23s ease-in;
+    @media (min-width: $tablet){
+        grid-template-columns: 1fr 1fr;
+    }
 
-                            
-                // styles for that hovering p
-                p,
-                a{
-                    margin: 2rem;
-                }
+    @media (min-width: $desktop){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-            }
-
-            &:hover .hover{
-                opacity: 100%;
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.626);
-                z-index: 3;
-                max-width: 300px;
-                height: calc(100% - .25rem);
-                bottom: 0;
-                top: 0;
-
-            }
-        }
+    @media (min-width: 1440px){ // make this its own variable :)
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

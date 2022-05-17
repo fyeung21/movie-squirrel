@@ -1,0 +1,78 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.movie-card{
+    max-width: 274px;
+    margin: 0 auto;
+
+    div:nth-child(1){
+        position: relative;
+        max-width: 274px;
+        margin: 0 auto;
+        
+        img{
+            max-width: 274px;
+            // // just to make sure all the movies have the same height
+            // height: 428px;
+            // object-fit: cover;
+
+        }
+
+        .hover{
+            // while you work please just comment this out just in case
+            opacity: 0;
+            position: absolute;
+            max-width: 274px;
+            height: calc(100% - .40rem);
+            bottom: 0;
+            top: 0;
+            transition: opacity .23s ease-in;
+
+                        
+            // styles for that hovering p
+            p,
+            a{
+                margin: 2.25rem;
+            }
+
+        }
+
+        &:hover .hover{
+            opacity: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.916);
+            z-index: 3;
+            max-width: 274px;
+            height: calc(100% - .40rem);
+            bottom: 0;
+            top: 0;
+            transition: opacity .23s ease-in;
+            
+        }
+
+        a {
+            color: $accent-color;
+            font-weight: $font-weight-navigation;
+            font-size: 1.25rem;  // subjected to change!
+            text-align: center;
+            display: block;
+            border: .25rem solid $accent-color;
+            padding: .625rem .25rem ;
+            transition: color .3s ease-in, border .3s ease-in;
+
+            &:hover{
+                border: .25rem solid $main-color;
+                color: $main-color;
+                transition: color .3s ease-in, border .3s ease-in;
+            }
+        }
+    }
+
+    .titles{
+        max-width: 274px;
+
+        p:nth-child(2){
+            color: $accent-color
+        }
+    }
+}

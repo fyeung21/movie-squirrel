@@ -1,5 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const getFaves = () => {
+  let favesFromStorage = localStorage.getItem('movieFaves');
+
+  if (favesFromStorage === null) {
+    // If no 'movieFaves' in storage, return empty array
+      favesFromStorage = [];
+  } else {
+    // If 'movieFaves' is found in storage, return as array
+      favesFromStorage = JSON.parse(favesFromStorage);
+  }
+  return favesFromStorage;
+}
+
 const getIndex = (item, arr) => {
   // findIndex() in array from when argument is first true
   // find the index of where the item from the parameter is in the array
@@ -9,14 +22,17 @@ const getIndex = (item, arr) => {
 export const favouritesSlice = createSlice({
   name: 'favourites',
   initialState: {
-    value: []
+    value: getFaves()
   },
   reducers: {
     // Add functions that will manipulate the state
     addFavourite: (state, action) => {
         console.log(state.value);
         console.log(action.payload);
-        state.value = [...state.value, action.payload];
+        const newFaves = [...state.value, action.payload];
+        //store newFaves array into local storage
+        localStorage.setItem('movieFaves', JSON.stringify(newFaves));
+        state.value = newFaves;
     },
     removeFavourite: (state, action) => {
         const favesArray = state.value;
@@ -27,8 +43,9 @@ export const favouritesSlice = createSlice({
         console.log(action.payload)
         console.log(state.value)
         favesArray.splice(getIndex(action.payload, state.value), 1);
+        // set edited favesArray into local storage (replacing 'newFaves' array)
+        localStorage.setItem('movieFaves', JSON.stringify(favesArray));
         state.value = favesArray;
-        console.log('removing fav...')
     }
   }
 })

@@ -6,7 +6,6 @@ import FaveBtn from '../Faves/FaveBtn';
 
 const MovieSingle = ({movie}) => {
 
-  console.log(movie);
   return (
     <section className='single-movie-style'>
     <div className='single-movie-poster'>

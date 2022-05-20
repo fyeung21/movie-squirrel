@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const getFaves = () => {
+export const getFaves = () => {
   let favesFromStorage = localStorage.getItem('movieFaves');
 
   if (favesFromStorage === null) {

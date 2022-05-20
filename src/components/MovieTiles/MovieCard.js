@@ -7,7 +7,6 @@ const MovieCard = ({movie}) => {
 
   // this cuts the description so that it isnt too long in the card divs!
   const desc = movie.overview.substring(0, 200) + " ...";
-  // console.log(movie.overview.substring(1, 227));
 
   // this converts the rating from a x/10 to a percentage :)
   const rating = Math.round((movie.vote_average/10) *100);

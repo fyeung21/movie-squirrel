@@ -24,7 +24,6 @@ const PageMovieSingle = () => {
 
         // store the selected movie into the movie data const
         setMovieData(res);
-        console.log(res);
      }
 
      fetchMovieData();

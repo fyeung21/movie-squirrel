@@ -5,10 +5,10 @@ import MovieCard from '../MovieTiles/MovieCard';
 
 const FavesContainer = () => {
   // TO DO: see how redux plays into this, maybe has to do with app auto refresh when user removes a fave.
-  // const faves = useSelector((state) => state.faves.value);
+  const faves = useSelector((state) => state.favourites.value);
   // Get faves Array from local storage
-  const faves = getFaves();
-  console.log(faves);
+  // const faves = getFaves();
+  // console.log(faves);
 
   // If faves array has items, map out individual movies
   return (
@@ -23,7 +23,7 @@ const FavesContainer = () => {
           <p>You have {faves.length} favourites!</p>
           <div className="faves-grid">
             {faves.map((singleFave) => (
-              <MovieCard key={singleFave.id} movie={singleFave} />
+              <MovieCard key={singleFave.id} movie={singleFave} isFavourite={true}/>
             ))}
           </div>
         </section>

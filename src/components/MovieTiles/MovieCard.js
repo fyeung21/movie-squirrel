@@ -1,13 +1,24 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import FaveBtn from '../Faves/FaveBtn';
+import { addFavourite, removeFavourite } from '../../features/favourites/favouritesSlice';
+import { useDispatch } from 'react-redux';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, isFavourite }) => {
   // this cuts the description so that it isnt too long in the card divs!
   const desc = movie.overview.substring(0, 200) + ' ...';
 
   // this converts the rating from a x/10 to a percentage :)
   const rating = Math.round((movie.vote_average / 10) * 100);
+
+  const dispatch = useDispatch();
+
+  const handleFaveClick = (addToFave, obj) => {
+    if (addToFave === true) {
+          dispatch(addFavourite(obj));
+    } else {
+          dispatch(removeFavourite(obj));
+    }
+  }
 
   return (
     <article className="movie-card">
@@ -29,7 +40,13 @@ const MovieCard = ({ movie }) => {
         <h2>{movie.title}</h2>
         <p>Release Date: {movie.release_date}</p>
         <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
-        <FaveBtn movie={movie} />
+        <article>
+          { isFavourite ?
+            <FaveBtn movie={movie} toggle={false} handleFaveClick={handleFaveClick}/>
+            :
+            <FaveBtn movie={movie} handleFaveClick={handleFaveClick}/>
+          }
+        </article>
       </div>
     </article>
   );

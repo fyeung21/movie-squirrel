@@ -5,10 +5,11 @@ import SortNav from "../components/SortNav/SortNav";
 import { Helmet } from 'react-helmet';
 
 
-const PageHome = ({sort}) => {
+const PageHome = () => {
 
   // store the 12 tiles here
   const [moviesData, setMoviesData] = useState(false);
+  const [sort, setSort] = useState('popular');
 
 
   useEffect(()=> {
@@ -34,7 +35,8 @@ const PageHome = ({sort}) => {
             <title>Movies Home | Movie Squirrel</title>
         </Helmet>
         <section className="pageHome">
-          <SortNav />
+          {console.log(sort)}
+          <SortNav setSort={setSort}/>
           {/* movies data is where the information from the query will be stored in the prop */}
           {moviesData !== false && <MoviesContainer moviesData={moviesData}/>}
         </section>

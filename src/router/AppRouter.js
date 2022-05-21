@@ -16,10 +16,10 @@ const AppRouter = () => {
         <main>
           <Routes>
             <Route path="/" exact element={<PageHome sort="popular" />} />
-            <Route path="/sort/popular" exact element={<PageHome sort="popular" />} />
-            <Route path="/sort/top-rated" exact element={<PageHome sort="top_rated" />} />
-            <Route path="/sort/upcoming" exact element={<PageHome sort="upcoming" />} />
-            <Route path="/sort/now-playing" exact element={<PageHome sort="now_playing" />} />
+            {/* <Route path="/sort/popular" exact element={<PageHome />} />
+            <Route path="/sort/top-rated" exact element={<PageHome  />} />
+            <Route path="/sort/upcoming" exact element={<PageHome  />} />
+            <Route path="/sort/now-playing" exact element={<PageHome  />} /> */}
             <Route path="/movies/:id" element={<PageMovieSingle />} />
             <Route path="/favourites" element={<PageFaves />} />
             <Route path="/about" element={<PageAbout />} />

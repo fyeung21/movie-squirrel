@@ -1,24 +1,25 @@
 import { NavLink } from "react-router-dom";
+import React from 'react';
 
-import React from 'react'
 
 const SortNav = () => {
   return (
     <nav>
-        <ul>
-            <li>
+        <select>
+            <option>
                 <NavLink to="/sort/popular">Popular</NavLink>
-            </li>
-            <li>
+            </option>
+            <option>
                 <NavLink to="/sort/top-rated">Top Rated</NavLink>
-            </li>
-            <li>
+            </option>
+            <option>
                 <NavLink to="/sort/upcoming">Upcoming</NavLink>
-            </li>
-            <li>
+            </option>
+            <option>
                 <NavLink to="/sort/now-playing">Now Playing</NavLink>
-            </li>
-        </ul>
+            </option>
+        
+        </select>
     </nav>
   )
 }

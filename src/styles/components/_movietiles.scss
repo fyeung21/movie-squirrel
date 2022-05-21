@@ -14,7 +14,7 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    @media (min-width: 1440px){ // make this its own variable :)
+    @media (min-width: $large-screen){ // make this its own variable :)
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

@@ -3,12 +3,12 @@
 
 .faves-page {
 
-    h2 {
+    .favourites-title {
         text-transform: capitalize;
         text-align: center;
     }
 
-    .faves-container {
+    .faves-grid {
         display: grid;
         justify-content: center;
         gap: 1rem;

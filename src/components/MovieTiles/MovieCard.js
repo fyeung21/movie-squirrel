@@ -33,9 +33,11 @@ const MovieCard = ({ movie }) => {
       </div>
 
       <div className="titles">
-        <h2>{movie.title}</h2>
-        <p>{releaseDate}</p>
-        <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+        <Link to ={`/movies/${movie.id}`}>
+          <h2>{movie.title}</h2>
+          <p>{releaseDate}</p>
+          <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+        </Link>
         <FaveBtn movie={movie} />
       </div>
     </article>

@@ -9,6 +9,13 @@ const MovieCard = ({ movie }) => {
   // this converts the rating from a x/10 to a percentage :)
   const rating = Math.round((movie.vote_average / 10) * 100);
 
+  // convert the date here
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  // raw release date
+  const rDate = new Date(movie.release_date);
+  // convert it to the mm/dd/yyyy
+  const releaseDate = months[rDate.getMonth()] + ' ' + rDate.getDate() + ', ' + rDate.getFullYear();
+
   return (
     <article className="movie-card">
       <div>
@@ -26,9 +33,11 @@ const MovieCard = ({ movie }) => {
       </div>
 
       <div className="titles">
-        <h2>{movie.title}</h2>
-        <p>Release Date: {movie.release_date}</p>
-        <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+        <Link to ={`/movies/${movie.id}`}>
+          <h2>{movie.title}</h2>
+          <p>{releaseDate}</p>
+          <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+        </Link>
         <FaveBtn movie={movie} />
       </div>
     </article>

@@ -6,6 +6,9 @@ import FaveBtn from '../Faves/FaveBtn';
 
 const MovieSingle = ({movie}) => {
 
+  // store the last item in a variable
+  const lastItem = movie.genres[movie.genres.length - 1];
+
   return (
     <section className='single-movie-style'>
     <div className='single-movie-poster'>
@@ -21,7 +24,8 @@ const MovieSingle = ({movie}) => {
         <p>{movie.overview}</p>
         <p>{movie.runtime} minutes</p>
          {/* if there are multiple genres, output using this loop */}
-        {movie.genres.map(genre => <p key={genre.id} className='genre'>{genre.name}</p>)}
+         <h2>{movie.genres.length > 1 ? 'Genres' : 'Genre' }</h2>
+        <p>{movie.genres.map(genre =>  <span key={genre.id}>{ genre.id === lastItem.id ? genre.name : genre.name + ', '}</span>)}</p>
     </div>
     </section>
   )

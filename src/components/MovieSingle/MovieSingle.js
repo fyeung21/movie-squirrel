@@ -9,6 +9,9 @@ const MovieSingle = ({movie}) => {
   // store the last item in a variable
   const lastItem = movie.genres[movie.genres.length - 1];
 
+  // convert movie rating into percent here
+  const rating = Math.round((movie.vote_average / 10) * 100);
+
   return (
     <section className='single-movie-style'>
     <div className='single-movie-poster'>
@@ -20,7 +23,7 @@ const MovieSingle = ({movie}) => {
     <div className='single-movie-text'>
         <h1>{movie.title}</h1>
         <FaveBtn movie={movie}/>
-        <p>{movie.vote_average}/10</p>
+        <p>{rating}%</p>
         <p>{movie.overview}</p>
         <p>{movie.runtime} minutes</p>
          {/* if there are multiple genres, output using this loop */}

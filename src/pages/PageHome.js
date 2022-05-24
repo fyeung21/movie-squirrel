@@ -5,11 +5,10 @@ import SortNav from "../components/SortNav/SortNav";
 import { Helmet } from 'react-helmet';
 
 
-const PageHome = ({sort}) => {
+const PageHome = ({ sort }) => {
 
   // store the 12 tiles here
   const [moviesData, setMoviesData] = useState(false);
-
 
   useEffect(()=> {
     const fetchMovies = async () => {
@@ -22,7 +21,6 @@ const PageHome = ({sort}) => {
         const firstTwelve = res.results.splice(0, 12);
         setMoviesData(firstTwelve);
 
-        // console.log(res);
     }
     fetchMovies();
 

@@ -1,25 +1,24 @@
-import { NavLink } from "react-router-dom";
-
-import React from 'react'
+import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const SortNav = () => {
+
+    const [selectedValue, setSelectedValue] = useState('popular');
+
+    const navigate = useNavigate();
+
+    const handleOption = (e) => {
+        setSelectedValue(e.target.value);
+        navigate(`/sort/${e.target.value}`);
+    }
+
   return (
-    <nav>
-        <ul>
-            <li>
-                <NavLink to="/sort/popular">Popular</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sort/top-rated">Top Rated</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sort/upcoming">Upcoming</NavLink>
-            </li>
-            <li>
-                <NavLink to="/sort/now-playing">Now Playing</NavLink>
-            </li>
-        </ul>
-    </nav>
+    <select onChange={handleOption} value={selectedValue}>
+        <option value="popular">popular</option>
+        <option value="now-playing">now playing</option>
+        <option value="upcoming">upcoming</option>
+        <option value="top-rated">top rated</option>
+    </select>
   )
 }
 

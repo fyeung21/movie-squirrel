@@ -13,7 +13,7 @@ const isFavourite = (arr,path,id) => {
         return false;
     }
 
-    return arr.someObj((obj) => obj.id === id);
+    return arr.some((obj) => obj.id === id);
 }
 
 export default isFavourite;

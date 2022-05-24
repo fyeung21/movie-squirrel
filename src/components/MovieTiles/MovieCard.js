@@ -19,6 +19,14 @@ const MovieCard = ({ movie, isFavourite }) => {
           dispatch(removeFavourite(obj));
     }
   }
+  
+  // convert the date here
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  // raw release date
+  const rDate = new Date(movie.release_date);
+  // convert it to the mm/dd/yyyy
+  const releaseDate = months[rDate.getMonth()] + ' ' + rDate.getDate() + ', ' + rDate.getFullYear();
+
 
   return (
     <article className="movie-card">
@@ -38,7 +46,7 @@ const MovieCard = ({ movie, isFavourite }) => {
 
       <div className="titles">
         <h2>{movie.title}</h2>
-        <p>Release Date: {movie.release_date}</p>
+        <p>{movie.release_date}</p>
         <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
         <article>
           { isFavourite ?

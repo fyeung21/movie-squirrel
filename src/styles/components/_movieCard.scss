@@ -4,6 +4,9 @@
 .movie-card{
     max-width: 274px;
     margin: 0 auto;
+    padding-bottom: 1.7rem;
+  
+  
 
     div:nth-child(1){
         position: relative;
@@ -21,6 +24,9 @@
         }
 
         @media (min-width:$tablet){
+            
+            padding-bottom: 0 auto;
+
             .hover{
                 display: block;
                 // while you work please just comment this out just in case
@@ -80,4 +86,5 @@
             color: $accent-color
         }
     }
+  
 }

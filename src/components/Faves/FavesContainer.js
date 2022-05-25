@@ -9,13 +9,15 @@ const FavesContainer = () => {
   return (
     <div className="faves-container">
       {faves.length < 1 ? (
-        <p>
-          Your movie stash is empty! Go back to <Link to="/">home</Link> to start adding to your
-          stash!
-        </p>
+        <section className="empty-faves">
+          <p>
+            Your movie stash is empty! Go back to <Link to="/">home</Link> to start adding to your
+            stash!
+          </p>
+        </section>
       ) : (
         <section>
-          <p>You have {faves.length} favourite(s).</p>
+            <p>You have {faves.length} favourite(s).</p>
           <div className="faves-grid">
             {/* If faves array has items, map out individual movies */}
             {faves.map((singleFave) => (

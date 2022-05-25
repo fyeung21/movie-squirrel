@@ -3,13 +3,26 @@ import React from 'react';
 import noPoster from '../../images/no-movie-poster.jpg';
 // import buttons here !
 import FaveBtn from '../Faves/FaveBtn';
+import { addFavourite, removeFavourite } from '../../features/favourites/favouritesSlice';
+import { useDispatch } from 'react-redux';
 
-const MovieSingle = ({ movie }) => {
+const MovieSingle = ({ movie, isFavourite }) => {
   // store the last item in a variable
   const lastItem = movie.genres[movie.genres.length - 1];
 
   // convert movie rating into percent here
   const rating = Math.round((movie.vote_average / 10) * 100);
+
+  // Redux related for favouriting funciton
+  const dispatch = useDispatch();
+
+  const handleFaveClick = (addToFave, obj) => {
+    if (addToFave === true) {
+          dispatch(addFavourite(obj));
+    } else {
+          dispatch(removeFavourite(obj));
+    }
+  }
 
   return (
     <section className="single-movie-style">
@@ -43,7 +56,13 @@ const MovieSingle = ({ movie }) => {
               ))}
             </p>
           </div>
-          <FaveBtn movie={movie} />
+          <div>
+            { isFavourite ?
+              <FaveBtn movie={movie} isFave={true} handleFaveClick={handleFaveClick}/>
+              :
+              <FaveBtn movie={movie} isFave={false} handleFaveClick={handleFaveClick}/>
+            }
+          </div>
         </article>
       </div>
     </section>

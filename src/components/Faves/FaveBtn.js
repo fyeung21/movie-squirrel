@@ -15,9 +15,13 @@ const FaveBtn = ({ movie, handleFaveClick, isFave }) => {
   return (
     <div className="fave-btn">
       { isFave === true ?
-        <button onClick={handleRemoveFave}><HeartFill/></button>
+        <div title="Remove from favourites">
+          <button onClick={handleRemoveFave}><HeartFill/></button>
+        </div>
         :
-        <button onClick={handleAddFave}><HeartEmpty/></button>
+        <div title="Add to favourites">
+          <button onClick={handleAddFave}><HeartEmpty/></button>
+        </div>
       }
     </div>
   );

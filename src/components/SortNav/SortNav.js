@@ -14,7 +14,7 @@ const SortNav = () => {
 
   return (
     <>
-      <nav className=''>
+      <nav className='desktop-sort'>
           <ul>
               <li>
                   <NavLink to="/sort/popular">popular</NavLink>
@@ -31,7 +31,7 @@ const SortNav = () => {
           </ul>
       </nav>
 
-      <select onChange={handleOption} value={selectedValue}>
+      <select onChange={handleOption} value={selectedValue} className='mobile-sort'>
           <option value="popular">popular</option>
           <option value="now-playing">now playing</option>
           <option value="upcoming">upcoming</option>

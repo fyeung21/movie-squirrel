@@ -34,12 +34,14 @@ const MovieCard = ({ movie, isFavourite }) => {
     <article className="movie-card">
       <div className="img-container">
         {movie.poster_path !== null && (
-          <img
-            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-            alt={`Poster for '${movie.title}'`}
-          />
+          <Link to={`/movies/${movie.id}`}>
+            <img
+              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+              alt={`Poster for '${movie.title}'`}
+            />
+          </Link>
         )}
-
+        {/* Hover Card*/}
         <article className="hover-card">
             <p>{movie.overview.length > 200 ? shortDesc : movie.overview}</p>
             <div className="more-info">
@@ -52,7 +54,7 @@ const MovieCard = ({ movie, isFavourite }) => {
         <h2>{movie.title.length > 20 ? shortTitle : movie.title}</h2>
             <p>{releaseDate}</p>
         <article>
-            <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+            <p className="rating">{!movie.vote_average ? 'N/A' : rating + '%'}</p>
           <div>
             { isFavourite ?
               <FaveBtn movie={movie} isFave={true} handleFaveClick={handleFaveClick}/>
@@ -60,6 +62,9 @@ const MovieCard = ({ movie, isFavourite }) => {
               <FaveBtn movie={movie} isFave={false} handleFaveClick={handleFaveClick}/>
             }
           </div>
+        </article>
+        <article className="synopsis">
+            <p>{movie.overview.length > 200 ? shortDesc : movie.overview} <Link to={`/movies/${movie.id}`}>More</Link></p>
         </article>
       </section>
     </article>

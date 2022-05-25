@@ -27,6 +27,13 @@
     p {
         margin: 0 0 1rem 0.5rem;
     }
+
+    @media (min-width: $tablet) {
+
+        p {
+            margin: 0 0 3rem 0.5rem;
+        }
+    }
 }
 
 .fave-btn {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const SortNav = () => {
 
@@ -13,12 +13,31 @@ const SortNav = () => {
     }
 
   return (
-    <select onChange={handleOption} value={selectedValue}>
-        <option value="popular">popular</option>
-        <option value="now-playing">now playing</option>
-        <option value="upcoming">upcoming</option>
-        <option value="top-rated">top rated</option>
-    </select>
+    <>
+      <nav className=''>
+          <ul>
+              <li>
+                  <NavLink to="/sort/popular">popular</NavLink>
+              </li>
+              <li>
+                  <NavLink to="/sort/now-playing">now playing</NavLink>
+              </li>
+              <li>
+                  <NavLink to="/sort/upcoming">upcoming</NavLink>
+              </li>
+              <li>
+                  <NavLink to="/sort/top-rated">top rated</NavLink>
+              </li>
+          </ul>
+      </nav>
+
+      <select onChange={handleOption} value={selectedValue}>
+          <option value="popular">popular</option>
+          <option value="now-playing">now playing</option>
+          <option value="upcoming">upcoming</option>
+          <option value="top-rated">top rated</option>
+      </select>
+    </>
   )
 }
 

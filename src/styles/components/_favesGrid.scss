@@ -2,6 +2,7 @@
 @use "../base/mixins" as *;
 
 .faves-page {
+    padding-bottom: 1.75rem;
 
     .favourites-title {
         text-transform: capitalize;
@@ -19,6 +20,12 @@
         @media (min-width: $desktop) {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
+    }
+}
+
+.faves-container {
+    p {
+        margin: 0 0 1rem 0.5rem;
     }
 }
 

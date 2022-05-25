@@ -15,7 +15,7 @@ const FavesContainer = () => {
         </p>
       ) : (
         <section>
-          <p>You have {faves.length} favourites!</p>
+          <p>You have {faves.length} favourite(s).</p>
           <div className="faves-grid">
             {/* If faves array has items, map out individual movies */}
             {faves.map((singleFave) => (

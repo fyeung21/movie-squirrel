@@ -9,12 +9,12 @@
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
-        padding: 3rem;
-        padding-bottom: 20rem;
+        margin: 10rem 3rem 15rem;
         gap: 2.5rem;
         
     }
     @media (min-width: $desktop) {
+        margin: 3rem;
         gap: 7rem;
     }
 

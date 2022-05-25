@@ -2,13 +2,11 @@
 @use '../base/mixins' as *;
 
 .page-about {
-    height: 90vh;
+    height: 70vh;
     
     .about-container {
-        border: solid 1px $accent-color;
-        max-width: 700px;
-        margin: 8rem auto;
-        padding: 3rem; 
+        max-width: 800px;
+        margin: 3rem auto;
     }
 
     a {
@@ -18,25 +16,22 @@
     @media (min-width: $tablet) {
         
         .about-container  {
-     
-            margin: 12rem auto;
-            padding: 2rem 2rem;
+            margin: 8rem auto;
+
+            h2 {
+                margin: 0;
+            }
         }
-       
- 
+        
     }
 
     @media (min-width: $desktop) {
     
         .about-container  {
-            
-            font-size: 25px;
+            border: solid 1px $accent-color;
+            font-size: 1.25rem;
             padding: 5rem 5rem;
-        }
-       
-
+            margin: 12rem auto 0;
+        } 
     }
-
-
-    
 }

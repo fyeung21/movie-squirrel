@@ -14,19 +14,34 @@
         
     }
 
-  
-
     .single-movie-text   {
+        padding: 5rem 0 0;
 
-        padding: 1rem 0;
-        margin: -1.5rem 0;
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin: 0.5rem 0;
+                
+                &:nth-child(1) {
+                    color: $accent-color;
+                    font-size: 1.75rem;
+                }
+            }
+        }
+        .bottom-flex {
+            align-items: flex-end;
+        }
 
         @media (min-width: $tablet) {
      
             margin: -2rem 0;
         }
 
-        h2{
+        h2 {
+            color: $accent-color;
             font-size: 1.25rem;
         }
     

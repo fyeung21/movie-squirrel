@@ -3,8 +3,7 @@
 
 .movie-card {
     max-width: 274px;
-    margin: 0 auto;
-    padding-bottom: 1.7rem;
+    margin: 0 auto 2rem;
 
     img {
         width: 275px;
@@ -66,8 +65,24 @@
     .titles {
         max-width: 274px;
 
-        p:nth-child(2) {
-            color: $accent-color;
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+        p {
+            margin: 0;
+        }
+
+        // flex container for rating and FaveBtn to align
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 0.75rem;
+
+            p {
+                color: $accent-color;
+                font-size: 2rem; 
+            }
         }
     }
 }

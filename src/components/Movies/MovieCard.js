@@ -6,6 +6,8 @@ import { useDispatch } from 'react-redux';
 const MovieCard = ({ movie, isFavourite }) => {
   // this cuts the description so that it isnt too long in the card divs!
   const shortDesc = movie.overview.substring(0, 200) + ' ...';
+  // Shortens Movie Title to maintain card info positioning
+  const shortTitle = movie.title.substring(0, 20) + ' ...';
 
   // this converts the rating from a x/10 to a percentage :)
   const rating = Math.round((movie.vote_average / 10) * 100);
@@ -46,18 +48,20 @@ const MovieCard = ({ movie, isFavourite }) => {
         </article>
       </div>
 
-      <div className="titles">
-        <h2>{movie.title}</h2>
-        <p>{releaseDate}</p>
-        <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+      <section className="titles">
+        <h2>{movie.title.length > 20 ? shortTitle : movie.title}</h2>
+            <p>{releaseDate}</p>
         <article>
-          { isFavourite ?
-            <FaveBtn movie={movie} isFav={true} handleFaveClick={handleFaveClick}/>
-            :
-            <FaveBtn movie={movie} isFav={false} handleFaveClick={handleFaveClick}/>
-          }
+            <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
+          <div>
+            { isFavourite ?
+              <FaveBtn movie={movie} isFav={true} handleFaveClick={handleFaveClick}/>
+              :
+              <FaveBtn movie={movie} isFav={false} handleFaveClick={handleFaveClick}/>
+            }
+          </div>
         </article>
-      </div>
+      </section>
     </article>
   );
 };

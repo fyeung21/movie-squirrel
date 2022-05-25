@@ -91,6 +91,10 @@
         }
         .synopsis {
             display: block;
+
+            a {
+                color: $accent-color;
+            }
         }
 
         @media (min-width: $tablet) {

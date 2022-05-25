@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet';
 import FavesContainer from '../components/Faves/FavesContainer';
-import MovieCard from '../components/MovieTiles/MovieCard';
 
 const PageFaves = () => {
   return (

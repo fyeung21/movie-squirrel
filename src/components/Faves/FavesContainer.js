@@ -3,13 +3,9 @@ import { Link } from 'react-router-dom';
 import MovieCard from '../Movies/MovieCard';
 
 const FavesContainer = () => {
-  // TO DO: see how redux plays into this, maybe has to do with app auto refresh when user removes a fave.
+  // grab isFaves() stored in state variable "value". Related to Redux
   const faves = useSelector((state) => state.favourites.value);
-  // Get faves Array from local storage
-  // const faves = getFaves();
-  // console.log(faves);
 
-  // If faves array has items, map out individual movies
   return (
     <div className="faves-container">
       {faves.length < 1 ? (
@@ -21,6 +17,7 @@ const FavesContainer = () => {
         <section>
           <p>You have {faves.length} favourites!</p>
           <div className="faves-grid">
+            {/* If faves array has items, map out individual movies */}
             {faves.map((singleFave) => (
               <MovieCard key={singleFave.id} movie={singleFave} isFavourite={true}/>
             ))}

@@ -27,8 +27,6 @@ export const favouritesSlice = createSlice({
   reducers: {
     // Add functions that will manipulate the state
     addFavourite: (state, action) => {
-        console.log(state.value);
-        console.log(action.payload);
         const newFaves = [...state.value, action.payload];
         //store newFaves array into local storage
         localStorage.setItem('movieFaves', JSON.stringify(newFaves));
@@ -40,8 +38,6 @@ export const favouritesSlice = createSlice({
         // This splice matches the movie index in the favesArray and replaces 1 element with value=blank
         // When value parameter is not declared, splice removes the targeted element from array
         // therefore, removes targeted movie object from favesArray
-        console.log(action.payload)
-        console.log(state.value)
         favesArray.splice(getIndex(action.payload, state.value), 1);
         // set edited favesArray into local storage (replacing 'newFaves' array)
         localStorage.setItem('movieFaves', JSON.stringify(favesArray));

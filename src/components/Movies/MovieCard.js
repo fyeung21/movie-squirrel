@@ -55,9 +55,9 @@ const MovieCard = ({ movie, isFavourite }) => {
             <p>{!movie.vote_average ? 'N/A' : rating + '%'}</p>
           <div>
             { isFavourite ?
-              <FaveBtn movie={movie} isFav={true} handleFaveClick={handleFaveClick}/>
+              <FaveBtn movie={movie} isFave={true} handleFaveClick={handleFaveClick}/>
               :
-              <FaveBtn movie={movie} isFav={false} handleFaveClick={handleFaveClick}/>
+              <FaveBtn movie={movie} isFave={false} handleFaveClick={handleFaveClick}/>
             }
           </div>
         </article>

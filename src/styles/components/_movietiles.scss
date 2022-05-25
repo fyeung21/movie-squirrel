@@ -16,7 +16,7 @@
         color: $main-color;
         font-size: $card-titles;
         font-weight: $font-weight-navigation;
-        appearance: none;
+        appearance: none; // remove if you want to keep the triangle
 
         // border
         outline: none;

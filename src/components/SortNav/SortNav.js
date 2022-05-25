@@ -14,10 +14,10 @@ const SortNav = () => {
 
   return (
     <select onChange={handleOption} value={selectedValue}>
-        <option value="popular">popular</option>
-        <option value="now-playing">now playing</option>
-        <option value="upcoming">upcoming</option>
-        <option value="top-rated">top rated</option>
+        <option value="popular">Popular</option>
+        <option value="now-playing">Now playing</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="top-rated">Top rated</option>
     </select>
   )
 }

@@ -2,7 +2,14 @@
 @use "../base/mixins" as *;
 
 .faves-page {
-    padding-bottom: 1.75rem;
+    padding: auto auto 1.75rem;
+
+    @media (min-width: $tablet) {
+        padding-top: 3rem;
+    }
+    @media (min-width: $tablet) {
+        padding-top: 2rem;
+    }
 
     .favourites-title {
         text-transform: capitalize;
@@ -24,14 +31,28 @@
 }
 
 .faves-container {
-    p {
-        margin: 0 0 1rem 0.5rem;
-    }
+    // p {
+    //     margin: 0 0 1rem 0.5rem;
+    // }
 
     @media (min-width: $tablet) {
 
         p {
             margin: 0 0 3rem 0.5rem;
+        }
+    }
+
+    .empty-faves {
+        height: 70vh;
+        p {
+            margin: 3rem auto;
+        }
+
+        @media (min-width: $tablet) {
+
+            p {
+                margin: 0 0 3rem 0.5rem;
+            }
         }
     }
 }

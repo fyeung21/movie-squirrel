@@ -2,17 +2,18 @@
 @use '../base/mixins' as *;
 
 .footer {
-    margin-bottom: 4.5rem;
-    
-    @media (min-width: $tablet) {
-            margin-top:40px;
-            padding:10px;
-            height:40px;
-            text-align: center;
-            font-size: 20px;
-            border-top: 1px solid $glow-outline;
+    margin: 4.5rem 0;
+
+    cite {
+        font-size: 0.75rem;
     }
     
+    @media (min-width: $tablet) {
+            margin: 4rem 0 0;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid $glow-outline;
+    }
 }
 
 

@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet';
 import FavesContainer from '../components/Faves/FavesContainer';
-import MovieCard from '../components/MovieTiles/MovieCard';
 
 const PageFaves = () => {
   return (
@@ -10,7 +9,7 @@ const PageFaves = () => {
         <title>Favourites | Movie Squirrel</title>
       </Helmet>
       <section className='faves-page'>
-      <h2 className='favourites-title'>favourites</h2>
+      <h1 className='favourites-title'>favourites</h1>
         <FavesContainer />
       </section>
     </>

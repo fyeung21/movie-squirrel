@@ -1,11 +1,8 @@
 import HeartEmpty from '../Icons/HeartEmpty';
 import HeartFill from '../Icons/HeartFIll';
-//import { addFavourite, removeFavourite } from '../../features/favourites/favouritesSlice';
 
+const FaveBtn = ({ movie, handleFaveClick, isFave }) => {
 
-const FaveBtn = ({ movie, handleFaveClick, isFav }) => {
-
-  // const dispatch = useDispatch();
 
   const handleAddFave = () => {
     handleFaveClick(true, movie);
@@ -17,13 +14,14 @@ const FaveBtn = ({ movie, handleFaveClick, isFav }) => {
 
   return (
     <div className="fave-btn">
-      {/* TODO: insert toggle function if statement */}
-      {/* <button onClick={() => dispatch(addFavourite(movie))}><HeartEmpty/></button>
-      <button onClick={() => dispatch(removeFavourite(movie))}><HeartFill/></button> */}
-      { isFav === true ?
-        <button onClick={handleRemoveFave}><HeartFill/></button>
+      { isFave === true ?
+        <div title="Remove from favourites">
+          <button onClick={handleRemoveFave}><HeartFill/></button>
+        </div>
         :
-        <button onClick={handleAddFave}><HeartEmpty/></button>
+        <div title="Add to favourites">
+          <button onClick={handleAddFave}><HeartEmpty/></button>
+        </div>
       }
     </div>
   );

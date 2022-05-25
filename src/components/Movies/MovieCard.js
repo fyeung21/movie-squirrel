@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 
 const MovieCard = ({ movie, isFavourite }) => {
   // this cuts the description so that it isnt too long in the card divs!
-  const desc = movie.overview.substring(0, 200) + ' ...';
+  const shortDesc = movie.overview.substring(0, 200) + ' ...';
 
   // this converts the rating from a x/10 to a percentage :)
   const rating = Math.round((movie.vote_average / 10) * 100);
@@ -30,7 +30,7 @@ const MovieCard = ({ movie, isFavourite }) => {
 
   return (
     <article className="movie-card">
-      <div>
+      <div className="img-container">
         {movie.poster_path !== null && (
           <img
             src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
@@ -38,10 +38,12 @@ const MovieCard = ({ movie, isFavourite }) => {
           />
         )}
 
-        <div className="desc hover">
-          <p>{movie.overview.length > 200 ? desc : movie.overview}</p>
-          <Link to={`/movies/${movie.id}`}>More info</Link>
-        </div>
+        <article className="hover-card">
+            <p>{movie.overview.length > 200 ? shortDesc : movie.overview}</p>
+            <div className="more-info">
+              <Link to={`/movies/${movie.id}`}>More info</Link>
+            </div>
+        </article>
       </div>
 
       <div className="titles">

@@ -31,6 +31,17 @@ header {
 
             h1 {
                 margin: 0.5rem 0;
+
+                .squirrel-logo{
+                    width: 2.5rem;
+                    padding-left:.5rem;
+                    margin: auto;
+                }
+
+                a{
+                    display: flex;
+                    max-width: 254.73px;
+                }
             }
 
             @media(min-width: $large-screen){

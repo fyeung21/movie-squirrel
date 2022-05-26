@@ -3,6 +3,8 @@
 
 .pageHome ul  {
         display: none;
+        text-transform: capitalize;
+        font-weight: $font-weight-navigation;
         
         @media(min-width: $large-tablet){
             display: block;

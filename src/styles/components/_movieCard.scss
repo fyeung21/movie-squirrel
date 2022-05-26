@@ -2,13 +2,19 @@
 @use "../base/mixins" as *;
 
 .movie-card {
-    max-width: 274px;
     margin: 0 auto 2rem;
 
+    @media (min-width: $tablet) {
+        max-width: 274px;
+    }
+
     img {
-        width: 275px;
-        height: 428px;
         object-fit: cover;
+
+        @media (min-width: $tablet) {
+            width: 275px;
+            height: 428px; 
+        }
     }
 
     p {
@@ -67,8 +73,11 @@
         }
     }
 
-    .titles {
-        max-width: 274px;
+    .movie-text {
+
+        @media (min-width: $tablet) {
+            max-width: 274px;
+        }
 
         h2 {
             margin-bottom: 0.75rem;

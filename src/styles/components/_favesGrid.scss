@@ -2,7 +2,7 @@
 @use "../base/mixins" as *;
 
 .faves-page {
-    padding: auto auto 1.75rem;
+    margin-top: 2.5rem;
 
     @media (min-width: $tablet) {
         padding-top: 3rem;
@@ -16,46 +16,54 @@
         text-align: center;
     }
 
-    .faves-grid {
-        display: grid;
-        justify-content: center;
-        gap: 1rem;
-
+    .faves-container {
+        // p {
+        //     margin: 0 0 1rem 0.5rem;
+        // }
+    
         @media (min-width: $tablet) {
-            grid-template-columns: 1fr 1fr;
-        }
-        @media (min-width: $desktop) {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
-}
-
-.faves-container {
-    // p {
-    //     margin: 0 0 1rem 0.5rem;
-    // }
-
-    @media (min-width: $tablet) {
-
-        p {
-            margin: 0 0 3rem 0.5rem;
-        }
-    }
-
-    .empty-faves {
-        height: 70vh;
-        p {
-            margin: 3rem auto;
-        }
-
-        @media (min-width: $tablet) {
-
+    
             p {
                 margin: 0 0 3rem 0.5rem;
             }
         }
+
+        .empty-faves {
+            height: 70vh;
+
+            p {
+                margin: 2.5rem auto;
+            }
+    
+            @media (min-width: $tablet) {
+    
+                p {
+                    margin: 0 0 3rem 0.5rem;
+                }
+            }
+        }
+
+        .faves-grid {
+            display: grid;
+            justify-content: center;
+            gap: 1rem;
+    
+            @media (min-width: $tablet) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (min-width: $desktop) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+    
+        
     }
+
+    
+
 }
+
+
 
 .fave-btn {
     button {

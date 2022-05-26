@@ -1,8 +1,8 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.footer {
-    margin: 4.5rem 0;
+footer {
+    margin: 4.5rem auto;
 
     cite {
         font-size: 0.75rem;

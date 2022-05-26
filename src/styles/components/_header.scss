@@ -28,6 +28,9 @@ header {
                 justify-content: space-between;
                 align-items: center;
             }
+            @media (min-width: $med-screen) {
+                margin: 0 auto;
+            }
 
             h1 {
                 margin: 0.5rem 0;
@@ -38,14 +41,14 @@ header {
                     margin: auto;
                 }
 
-                a{
+                a {
                     display: flex;
                     max-width: 254.73px;
-                }
-            }
 
-            @media(min-width: $large-screen){
-                margin: 0 auto;
+                    &:focus {
+                        color: $main-color;
+                    }
+                }
             }
 
             nav {
@@ -66,14 +69,6 @@ header {
 
                         &:last-child {
                             margin: 0 0 0 1rem;
-                        }
-
-                        a {
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                color: $accent-color;
-                            }
                         }
                     }
                 }

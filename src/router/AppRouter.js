@@ -10,7 +10,7 @@ import MobileNav from '../components/Header/MobileNav';
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="movie-squirrel">
       <Header />
       <div className="wrapper">
         <main>

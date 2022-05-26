@@ -23,7 +23,7 @@ npm start
 ### Build
 
 ```bash
-npm build
+npm run build
 ```
 
 # Technologies

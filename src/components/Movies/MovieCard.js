@@ -50,7 +50,7 @@ const MovieCard = ({ movie, isFavourite }) => {
         </article>
       </div>
 
-      <section className="titles">
+      <section className="movie-text">
         <h2>{movie.title.length > 20 ? shortTitle : movie.title}</h2>
             <p>{releaseDate}</p>
         <article>

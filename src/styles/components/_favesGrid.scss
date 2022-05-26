@@ -2,56 +2,47 @@
 @use "../base/mixins" as *;
 
 .faves-page {
-    padding: auto auto 1.75rem;
-
-    @media (min-width: $tablet) {
-        padding-top: 3rem;
-    }
-    @media (min-width: $tablet) {
-        padding-top: 2rem;
-    }
-
     .favourites-title {
         text-transform: capitalize;
         text-align: center;
     }
 
-    .faves-grid {
-        display: grid;
-        justify-content: center;
-        gap: 1rem;
-
-        @media (min-width: $tablet) {
-            grid-template-columns: 1fr 1fr;
-        }
-        @media (min-width: $desktop) {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-    }
-}
-
-.faves-container {
-    // p {
-    //     margin: 0 0 1rem 0.5rem;
-    // }
-
-    @media (min-width: $tablet) {
-
+    .faves-container {
         p {
-            margin: 0 0 3rem 0.5rem;
+            @media (min-width: $tablet) {
+                margin: 0 auto 3rem;
+            }
+            @media (min-width: $large-tablet) {
+                margin: 3rem 3rem;
+            }
+            @media (min-width: $large-screen) {
+                margin: 3rem 0.5rem 3rem;
+            }
         }
-    }
 
-    .empty-faves {
-        height: 70vh;
-        p {
-            margin: 3rem auto;
+        .empty-faves {
+            height: 70vh;
+
+            a {
+                text-decoration: underline;
+            }
         }
 
-        @media (min-width: $tablet) {
+        .faves-grid {
+            display: grid;
+            justify-content: center;
+            gap: 1rem;
 
-            p {
-                margin: 0 0 3rem 0.5rem;
+            @media (min-width: $tablet) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (min-width: $desktop) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+    
+            @media (min-width: $large-screen) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
             }
         }
     }
@@ -62,11 +53,11 @@
         background-color: transparent;
         border: none;
         padding: 0;
-        
+
         //for icon to appear, need to set "width" in svg and "fill" in path
         svg {
             width: 2.5rem;
-    
+
             path {
                 fill: $accent-color;
             }

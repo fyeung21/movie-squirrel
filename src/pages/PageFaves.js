@@ -9,7 +9,7 @@ const PageFaves = () => {
         <title>Favourites | Movie Squirrel</title>
       </Helmet>
       <section className='faves-page'>
-      <h1 className='favourites-title'>favourites</h1>
+      <h2 className='favourites-title'>favourites</h2>
         <FavesContainer />
       </section>
     </>

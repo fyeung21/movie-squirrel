@@ -1,37 +1,43 @@
-@use '../base/variables' as *;
-@use '../base/mixins' as *;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .page-about {
     height: 70vh;
-    
-    .about-container {
-        max-width: 800px;
-        margin: 3rem auto;
-    }
-
-    a {
-        text-decoration: underline;
-    }
 
     @media (min-width: $tablet) {
-        
-        .about-container  {
-            margin: 8rem auto;
-
-            h2 {
-                margin: 0;
-            }
-        }
-        
+        height: 80vh;
     }
 
-    @media (min-width: $desktop) {
-    
-        .about-container  {
+    .about-container {
+        max-width: 800px;
+        margin: 0 auto;
+
+        @media (min-width: $desktop) {
+            // border box design when on desktop
             border: solid 1px $accent-color;
             font-size: 1.25rem;
             padding: 5rem 5rem;
             margin: 12rem auto 0;
-        } 
+        }
+
+        h2 {
+            text-align: center;
+
+            @media (min-width: $tablet) {
+                margin-top: 0;
+            }
+        }
+        p {
+            @media (min-width: $tablet) {
+                margin: 0 auto 3rem;
+
+                &:nth-child(3) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        a {
+            text-decoration: underline;
+        }
     }
 }

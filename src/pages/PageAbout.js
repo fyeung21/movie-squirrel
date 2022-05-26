@@ -17,7 +17,7 @@ const PageAbout = () => {
             will make you want to come back whenever you're looking for a quick glance at whats
             playing, most popular,top rated,and upcoming!
           </p>
-          This site uses <a href="https://www.themoviedb.org/documentation/api">TMDB's API</a> to fetch movie info, ratings, etc.
+          <p>This site uses <a href="https://www.themoviedb.org/documentation/api">TMDB's API</a> to fetch movie info, ratings, etc.</p>
         </section>
       </div>
     </>

@@ -6,7 +6,6 @@
     
     .about-container {
         max-width: 800px;
-        margin: 2.5rem auto;
 
         h2 {
             text-align: center;
@@ -20,7 +19,6 @@
     @media (min-width: $tablet) {
         
         .about-container  {
-            margin: 8rem auto;
 
             h2 {
                 margin: 0;

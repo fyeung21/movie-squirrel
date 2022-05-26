@@ -6,6 +6,7 @@
 
     @media (min-width: $tablet) {
         max-width: 274px;
+        padding-bottom: 0 auto;
     }
 
     img {
@@ -13,26 +14,21 @@
 
         @media (min-width: $tablet) {
             width: 275px;
-            height: 428px; 
+            height: 428px;
         }
     }
-
     p {
         margin: 0;
     }
 
-    .hover-card {
-        display: none;
-    }
+    .img-container {
+        display: block;
+        position: relative;
 
-    @media (min-width: $tablet) {
-        padding-bottom: 0 auto;
+        .hover-card {
+            display: none;
 
-        .img-container {
-            display: block;
-            position: relative;
-
-            .hover-card {
+            @media (min-width: $desktop) {
                 display: block;
                 position: absolute;
                 background-color: rgba(0, 0, 0, 0.95);
@@ -50,35 +46,34 @@
                     opacity: 1; //shows hover card
                     transition: opacity 0.3s ease-in;
                 }
+            }
 
-                .more-info {
-                    position: absolute;
-                    bottom: 4rem;
+            .more-info {
+                // Keeps all buttons in same position regardless of how much text
+                position: absolute;
+                bottom: 4rem;
 
-                    a {
-                        color: $accent-color;
-                        font-weight: $font-weight-navigation;
-                        font-size: 1.25rem;
-                        border: 0.25rem solid $accent-color;
-                        padding: 1rem 3rem;
+                a {
+                    color: $accent-color;
+                    font-weight: $font-weight-navigation;
+                    font-size: 1.25rem;
+                    border: 0.25rem solid $accent-color;
+                    padding: 1rem 3rem;
 
-                        &:hover {
-                            color: black;
-                            background-color: $accent-color;
-                            transition: background-color 0.3s ease-in;
-                        }
+                    &:hover {
+                        color: black;
+                        background-color: $accent-color;
+                        transition: background-color 0.3s ease-in;
                     }
                 }
             }
         }
-    }
+    } // End img container
 
     .movie-text {
-
         @media (min-width: $tablet) {
             max-width: 274px;
         }
-
         h2 {
             margin-bottom: 0.75rem;
         }
@@ -88,27 +83,24 @@
 
         // flex container for rating and FaveBtn to align
         article {
-            display: flex;
+            @include flex-row;
             justify-content: space-between;
             align-items: flex-end;
             margin-top: 0.75rem;
 
             .rating {
                 color: $accent-color;
-                font-size: 2rem; 
+                font-size: 2rem;
             }
         }
         .synopsis {
             display: block;
 
+            @media (min-width: $desktop) {
+                display: none;
+            }
             a {
                 color: $accent-color;
-            }
-        }
-
-        @media (min-width: $tablet) {
-            .synopsis {
-                display: none;
             }
         }
     }

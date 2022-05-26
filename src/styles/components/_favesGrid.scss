@@ -2,14 +2,6 @@
 @use "../base/mixins" as *;
 
 .faves-page {
-    margin-top: 2.5rem;
-
-    @media (min-width: $tablet) {
-        padding-top: 3rem;
-    }
-    @media (min-width: $tablet) {
-        padding-top: 2rem;
-    }
 
     .favourites-title {
         text-transform: capitalize;
@@ -17,10 +9,7 @@
     }
 
     .faves-container {
-        // p {
-        //     margin: 0 0 1rem 0.5rem;
-        // }
-    
+
         @media (min-width: $tablet) {
     
             p {
@@ -58,12 +47,7 @@
     
         
     }
-
-    
-
 }
-
-
 
 .fave-btn {
     button {

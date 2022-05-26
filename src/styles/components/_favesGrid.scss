@@ -2,50 +2,45 @@
 @use "../base/mixins" as *;
 
 .faves-page {
-
     .favourites-title {
         text-transform: capitalize;
         text-align: center;
     }
 
     .faves-container {
-
-        @media (min-width: $tablet) {
-    
-            p {
-                margin: 0 0 3rem 0.5rem;
+        p {
+            @media (min-width: $tablet) {
+                margin: 0 auto 3rem;
+            }
+            @media (min-width: $large-tablet) {
+                margin: 3rem 3rem;
+            }
+            @media (min-width: $large-screen) {
+                margin: 3rem 0.5rem 3rem;
             }
         }
 
         .empty-faves {
             height: 70vh;
-
-            p {
-                margin: 2.5rem auto;
-            }
-    
-            @media (min-width: $tablet) {
-    
-                p {
-                    margin: 2.5rem 0 3rem 0.5rem;
-                }
-            }
         }
 
         .faves-grid {
             display: grid;
             justify-content: center;
             gap: 1rem;
-    
+
             @media (min-width: $tablet) {
                 grid-template-columns: 1fr 1fr;
             }
+
             @media (min-width: $desktop) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+    
+            @media (min-width: $large-screen) {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
             }
         }
-    
-        
     }
 }
 
@@ -54,11 +49,11 @@
         background-color: transparent;
         border: none;
         padding: 0;
-        
+
         //for icon to appear, need to set "width" in svg and "fill" in path
         svg {
             width: 2.5rem;
-    
+
             path {
                 fill: $accent-color;
             }

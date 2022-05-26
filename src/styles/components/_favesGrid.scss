@@ -22,6 +22,10 @@
 
         .empty-faves {
             height: 70vh;
+
+            a {
+                text-decoration: underline;
+            }
         }
 
         .faves-grid {

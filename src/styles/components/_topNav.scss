@@ -20,14 +20,6 @@
                 margin-top: -2rem;
             }
 
-            a {
-                &:hover,
-                &:focus,
-                &:active {
-                    color: $accent-color;
-                }
-            }
-
             @media (min-width: $tablet) {
                 @include flex-row;
                 justify-content:space-around;

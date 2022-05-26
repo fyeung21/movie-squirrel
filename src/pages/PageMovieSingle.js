@@ -41,7 +41,7 @@ const PageMovieSingle = () => {
             <title className='singlepageStyle'>{`${movieData.title} | Movie Squirrel`}</title>
         </Helmet>
 
-        <section className="pageMovieSingle">
+        <section className="page-movie-single">
           {/* store the single movie data in a prop */}
           {movieData !== false   && <MovieSingle movie={movieData} isFavourite={isFavourite(faves, null, movieData.id)}/>}
         </section>

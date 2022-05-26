@@ -1,6 +1,12 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
+.page-movie-single {
+
+    @media (min-width: $tablet) {
+        height: 80vh;
+    }
+}
 .single-movie-style {
     margin: 2rem auto;
 
